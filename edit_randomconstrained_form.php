@@ -33,7 +33,6 @@ defined('MOODLE_INTERNAL') || die();
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class qtype_randomconstrained_edit_form extends question_edit_form {
-
     /**
      * Build the form definition.
      *
@@ -72,8 +71,8 @@ class qtype_randomconstrained_edit_form extends question_edit_form {
     }
 
     public function validation($fromform, $files) {
-        // Validation of category.
-        // Is not relevant for this question type.
+        //validation of category
+        //is not relevant for this question type
         return array();
     }
 

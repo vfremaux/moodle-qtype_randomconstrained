@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Strings for component qtype_randomconstrained
+ * Strings for component 'qtype_randomconstrained', language 'en', branch 'MOODLE_20_STABLE'
  *
  * @package    qtype
  * @subpackage randomconstrained

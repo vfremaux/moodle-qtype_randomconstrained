@@ -14,6 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
+
 /**
  * Page to edit quizzes
  *
@@ -41,17 +42,16 @@
  * @copyright  1999 onwards Martin Dougiamas and others {@link http://moodle.com}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-defined('MOODLE_INTERNAL') || die();
 
-// No config as customscripted.
+// require_once('../../config.php');
 require_once($CFG->dirroot . '/mod/quiz/editlib.php');
 require_once($CFG->dirroot . '/mod/quiz/addrandomform.php');
 require_once($CFG->dirroot . '/question/category_class.php');
 
-/*
- * These params are only passed from page request to request while we stay on
- * this page otherwise they would go in question_edit_setup.
- */
+
+
+// These params are only passed from page request to request while we stay on
+// this page otherwise they would go in question_edit_setup.
 $quiz_reordertool = optional_param('reordertool', -1, PARAM_BOOL);
 $quiz_qbanktool = optional_param('qbanktool', -1, PARAM_BOOL);
 $scrollpos = optional_param('scrollpos', '', PARAM_INT);
