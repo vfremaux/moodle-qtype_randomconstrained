@@ -25,7 +25,7 @@ before_install:
 
 install:
 
-  - moodle-plugin-ci plugin-install --branch $MOODLE_BRANCH vfremaux/moodle-quizaccess_chooseconstraints
+  - moodle-plugin-ci add-plugin --branch $MOODLE_BRANCH vfremaux/moodle-quizaccess_chooseconstraints
   - moodle-plugin-ci install
 
 script:
