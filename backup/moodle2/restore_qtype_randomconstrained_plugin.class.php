@@ -21,9 +21,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-
 defined('MOODLE_INTERNAL') || die();
-
 
 /**
  * restore plugin class that provides the necessary information
@@ -33,6 +31,7 @@ defined('MOODLE_INTERNAL') || die();
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class restore_qtype_randomconstrained_plugin extends restore_qtype_plugin {
+
     /**
      * Given one question_states record, return the answer
      * recoded pointing to all the restored stuff for random questions
@@ -49,20 +48,20 @@ class restore_qtype_randomconstrained_plugin extends restore_qtype_plugin {
 
         $answer = $state->answer;
         $result = '';
-        // randomxx-yy answer format
+        // Randomxx-yy answer format.
         if (preg_match('~^randomconstrained([0-9]+)-(.*)$~', $answer, $matches)) {
             $questionid = $matches[1];
             $subanswer  = $matches[2];
             $newquestionid = $this->get_mappingid('question', $questionid);
             $questionqtype = $DB->get_field('question', 'qtype', array('id' => $newquestionid));
-            // Delegate subanswer recode to proper qtype, faking one question_states record
+            // Delegate subanswer recode to proper qtype, faking one question_states record.
             $substate = new stdClass();
             $substate->question = $newquestionid;
             $substate->answer = $subanswer;
             $newanswer = $this->step->restore_recode_legacy_answer($substate, $questionqtype);
             $result = 'randomconstrained' . $newquestionid . '-' . $newanswer;
 
-        // simple question id format
+        // Simple question id format.
         } else {
             $newquestionid = $this->get_mappingid('question', $answer);
             $result = $newquestionid;
