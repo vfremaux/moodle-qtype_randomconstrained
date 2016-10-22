@@ -20,17 +20,17 @@
  * @package     qtype_randomconstrained
  * @category    qtype
  * @author      Valery Fremaux <valery.fremaux@gmail.com>
- * @copyright   2014 onwards Valery Fremaux (http://www.mylearningfactory.com)
+ * @copyright   2014 Valery Fremaux
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->version   = 2014091800;
-$plugin->requires  = 2014050800;
+$plugin->requires  = 2014111000;
 $plugin->component = 'qtype_randomconstrained';
-$plugin->release = '2.7.0 (Build 2014091800)';
+$plugin->release = '2.8.0 (Build 2014091800)';
 $plugin->maturity  = MATURITY_BETA;
 
 // Non moodle attributes.
-$plugin->codeincrement = '2.7.0000';
+$plugin->codeincrement = '2.8.0000';
