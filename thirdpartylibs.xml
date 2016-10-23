@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <libraries>
   <library>
-    <location>_customscripts</location>
+    <location>__customscripts</location>
     <name>Core scripts</name>
     <license>GPL V3</license>
     <version></version>

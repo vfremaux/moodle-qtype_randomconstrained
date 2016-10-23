@@ -446,7 +446,8 @@ $questionbank->display('editq',
         $pagevars['cat'], $pagevars['recurse'], $pagevars['showhidden'],
         $pagevars['qbshowtext']);
 
-    // CHANGE : Add random questions
+    // CHANGE+ : Add random questions.
+    // Required by qtype_randomconstrained.
     echo '<div id="randomconstrainedquestiondialog">';
     echo '<div class="bd">';
     require_once($CFG->dirroot.'/mod/quiz/accessrule/chooseconstraints/addrandomform.php');
@@ -461,7 +462,7 @@ $questionbank->display('editq',
     $randomform->display();
     echo '</div>';
     echo '</div>';
-    // /CHANGE
+    // /CHANGE.
 
 echo '</div>';
 echo '</div>';
