@@ -60,9 +60,8 @@ class restore_qtype_randomconstrained_plugin extends restore_qtype_plugin {
             $substate->answer = $subanswer;
             $newanswer = $this->step->restore_recode_legacy_answer($substate, $questionqtype);
             $result = 'randomconstrained' . $newquestionid . '-' . $newanswer;
-
-        // Simple question id format.
         } else {
+            // Simple question id format.
             $newquestionid = $this->get_mappingid('question', $answer);
             $result = $newquestionid;
         }

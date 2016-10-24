@@ -43,7 +43,8 @@ class qtype_randomconstrained_attempt_upgrader_test extends question_attempt_upg
             'course' => '5174',
             'name' => 'iCMA 41',
             'intro' => '<p>Welcome. This is the first K101 Interactive Computer Marked Assignment (iCMA).</p>
-        <p>After the open date, begin by clicking <b>Start attempt</b> and a pop-up box will appear. Click OK and this will take you to the questions.</p>
+        <p>After the open date, begin by clicking <b>Start attempt</b> and a pop-up box will appear.
+        Click OK and this will take you to the questions.</p>
         <p> </p>',
             'introformat' => FORMAT_HTML,
             'questiondecimalpoints' => '-1',
@@ -166,9 +167,9 @@ class qtype_randomconstrained_attempt_upgrader_test extends question_attempt_upg
             'category' => '3762',
             'parent' => '0',
             'name' => 'K101 iCMA41 Qs 2-v2',
-            'questiontext' => '<p>(Notice in the panel at the left that the question you have just done is now greyed out. Remember that you can <b>revisit any questions</b> by clicking on the <b>numbered boxes</b>. Click Q1 now to try this out and then click Q2 to return here.)</p>
-<p><img style="margin-left: 0px; margin-right: 0px;" src="http://learn.open.ac.uk/file.php/5174/K101images/icma41/K101CMA41-Q1-v0.gif" alt="Table 1 showing Number of households receiving home care (England)" title="Table 1 showing Number of households receiving home care (England)" width="512" height="284" /></p>
-<p><b>(<a target="_blank" href="http://learn.open.ac.uk/file.php/5174/iCMA-PDFs-resizableimages/k101-iCMA41-Q2-v2-ResizableFigure.pdf" title="PDF document containing iCMA image - to enable enlargement">Link to resizable Table 1</a>) </b></p>
+            'questiontext' => '<p>(Notice in the panel at the left that the question you have just done is now greyed out.
+            Remember that you can <b>revisit any questions</b> by clicking on the <b>numbered boxes</b>. Click Q1 now to try
+            this out and then click Q2 to return here.)</p>
 <p>Which was the first year when more than a quarter of a million households received care from independent agencies?</p>',
             'questiontextformat' => '1',
             'defaultmark' => '1',
@@ -231,7 +232,11 @@ class qtype_randomconstrained_attempt_upgrader_test extends question_attempt_upg
             'maxmark' => 1,
             'minfraction' => 0,
             'flagged' => 0,
-            'questionsummary' => "(Notice in the panel at the left that the question you have just done is now greyed out. Remember that you can REVISIT ANY QUESTIONS by clicking on the NUMBERED BOXES. Click Q1 now to try this out and then click Q2 to return here.) \n\n[Table 1 showing Number of households receiving home care (England)] \n\n(LINK TO RESIZABLE TABLE 1)  \n\nWhich was the first year when more than a quarter of a million households received care from independent agencies?",
+            'questionsummary' => "(Notice in the panel at the left that the question you have just done is now greyed out.
+            Remember that you can REVISIT ANY QUESTIONS by clicking on the NUMBERED BOXES. Click Q1 now to try this out and
+            then click Q2 to return here.) \n\n[Table 1 showing Number of households receiving home care (England)] \n\n(LINK
+            TO RESIZABLE TABLE 1)  \n\nWhich was the first year when more than a quarter of a million households received care
+            from independent agencies?",
             'rightanswer' => '2005',
             'responsesummary' => '2005',
             'timemodified' => 1238182723,
@@ -271,7 +276,8 @@ class qtype_randomconstrained_attempt_upgrader_test extends question_attempt_upg
             'id' => '4410',
             'course' => '5444',
             'name' => 'Block 3, Session 5 Quiz',
-            'intro' => 'Pour chacune des questions suivantes vous avez trois réponses possibles.  Cochez la bonne. (Cliquez sur « Check » pour vérifier votre réponse.)',
+            'intro' => 'Pour chacune des questions suivantes vous avez trois réponses possibles.  Cochez la bonne.
+(Cliquez sur « Check » pour vérifier votre réponse.)',
             'introformat' => FORMAT_HTML,
             'questiondecimalpoints' => '-1',
             'showuserpicture' => '1',
@@ -287,7 +293,8 @@ class qtype_randomconstrained_attempt_upgrader_test extends question_attempt_upg
             'questionsperpage' => '3',
             'shufflequestions' => '1',
             'shuffleanswers' => '1',
-            'questions' => '101983,101984,101985,0,101986,101987,101988,0,101989,101990,101991,0,101992,101993,101994,0,101995,101996,101997,0',
+            'questions' => '101983,101984,101985,0,101986,101987,101988,0,101989,101990,101991,0,101992,
+101993,101994,0,101995,101996,101997,0',
             'sumgrades' => '15',
             'grade' => '10',
             'timecreated' => '0',
@@ -310,7 +317,8 @@ class qtype_randomconstrained_attempt_upgrader_test extends question_attempt_upg
             'timestart' => '1274178725',
             'timefinish' => '1274179255',
             'timemodified' => '1274178763',
-            'layout' => '101989,101985,101994,0,101988,101986,101992,0,101997,101990,101991,0,101984,101995,101987,0,101983,101993,101996,0',
+            'layout' => '101989,101985,101994,0,101988,101986,101992,0,101997,101990,101991,0,101984,
+101995,101987,0,101983,101993,101996,0',
             'preview' => '0',
             'needsupgradetonewqe' => '1',
         );
@@ -408,7 +416,8 @@ class qtype_randomconstrained_attempt_upgrader_test extends question_attempt_upg
             'category' => '9148',
             'parent' => '0',
             'name' => '20',
-            'questiontext' => 'En France, le covoiturage est une pratique qui a été au départ préconisé par « les écolos et les verts », mais depuis, elle :',
+            'questiontext' => 'En France, le covoiturage est une pratique qui a été au départ préconisé par
+            « les écolos et les verts », mais depuis, elle :',
             'questiontextformat' => '1',
             'defaultmark' => '1',
             'penalty' => '0.33',
@@ -472,7 +481,8 @@ class qtype_randomconstrained_attempt_upgrader_test extends question_attempt_upg
             'maxmark' => 1,
             'minfraction' => 0,
             'flagged' => 0,
-            'questionsummary' => 'En France, le covoiturage est une pratique qui a été au départ préconisé par « les écolos et les verts », mais depuis, elle :',
+            'questionsummary' => 'En France, le covoiturage est une pratique qui a été au départ préconisé par
+            « les écolos et les verts », mais depuis, elle :',
             'rightanswer' => 'n’est plus uniquement un positionnement écologiste.',
             'responsesummary' => 'n’est plus uniquement un positionnement écologiste.',
             'timemodified' => 1274179164,
@@ -536,7 +546,8 @@ class qtype_randomconstrained_attempt_upgrader_test extends question_attempt_upg
             'questionsperpage' => '1',
             'shufflequestions' => '0',
             'shuffleanswers' => '1',
-            'questions' => '68646,0,81245,0,81246,0,81247,0,81248,0,81249,0,81250,0,82795,0,82797,0,82798,0,82799,0,82800,0,82801,0,82802,0,82803,0,82804,0,82805,0,82806,0,82807,0',
+            'questions' => '68646,0,81245,0,81246,0,81247,0,81248,0,81249,0,81250,0,82795,0,82797,0,82798,0,82799,0,
+82800,0,82801,0,82802,0,82803,0,82804,0,82805,0,82806,0,82807,0',
             'sumgrades' => '18',
             'grade' => '18',
             'timecreated' => '0',
@@ -559,7 +570,8 @@ class qtype_randomconstrained_attempt_upgrader_test extends question_attempt_upg
             'timestart' => '1267605659',
             'timefinish' => '1270202969',
             'timemodified' => '1269508052',
-            'layout' => '68646,0,81245,0,81246,0,81247,0,81248,0,81249,0,81250,0,82795,0,82797,0,82798,0,82799,0,82800,0,82801,0,82802,0,82803,0,82804,0,82805,0,82806,0,82807,0',
+            'layout' => '68646,0,81245,0,81246,0,81247,0,81248,0,81249,0,81250,0,82795,0,82797,0,82798,0,82799,0,
+82800,0,82801,0,82802,0,82803,0,82804,0,82805,0,82806,0,82807,0',
             'preview' => '0',
             'needsupgradetonewqe' => '1',
         );
@@ -657,7 +669,14 @@ class qtype_randomconstrained_attempt_upgrader_test extends question_attempt_upg
             'category' => '6882',
             'parent' => '0',
             'name' => '42.02.03.GraphConvert.E',
-            'questiontext' => '<p> The figure below shows a graph for converting between miles and kilometres. </p><p><img src="http://learnacct.open.ac.uk/file.php/5233/quizImages/u2/figs/42.02.07.GraphConvert.png" alt=" The graph has a horizontal axis, labelled miles, with a scale marked from 0 to 50 in steps of 5, and a vertical axis, labelled kilometres, with a scale from 0 to 80 in steps of 10. The straight line of the graph starts at the origin and slopes up to the right, and appears to pass through the point corresponding to 25 miles and 40 kilometres, and through the point corresponding to 50 miles and 80 kilometres. "></img> </p><p>By taking a reading from the graph, estimate how many kilometres are equivalent to 40 miles. </p><p>Round your answer to the nearest kilometre and type it in the box below. </p><p>(Your answer should be a single number, without units.) </p>',
+            'questiontext' => '<p> The figure below shows a graph for converting between miles and kilometres. </p>
+<p><img src="http://learnacct.open.ac.uk/file.php/5233/quizImages/u2/figs/42.02.07.GraphConvert.png"
+alt=" The graph has a horizontal axis, labelled miles, with a scale marked from 0 to 50 in steps of 5, and a vertical axis,
+labelled kilometres, with a scale from 0 to 80 in steps of 10. The straight line of the graph starts at the origin and slopes
+up to the right, and appears to pass through the point corresponding to 25 miles and 40 kilometres, and through the point
+corresponding to 50 miles and 80 kilometres. "></img> </p><p>By taking a reading from the graph, estimate how many kilometres
+are equivalent to 40 miles. </p><p>Round your answer to the nearest kilometre and type it in the box below. </p><p>(Your
+answer should be a single number, without units.) </p>',
             'questiontextformat' => '0',
             'defaultmark' => '3',
             'penalty' => '0.333333',
@@ -666,7 +685,15 @@ class qtype_randomconstrained_attempt_upgrader_test extends question_attempt_upg
             'stamp' => 'learn.open.ac.uk+100108135957+SZhkKF',
             'version' => 'learn.open.ac.uk+100108135957+ej40PM',
             'hidden' => '0',
-            'generalfeedback' => '<p> Conversion graph for miles and kilometres. </p><p><img src="http://learnacct.open.ac.uk/file.php/5233/quizImages/u2/figs/42.02.07.GraphConvert.E.png" alt=" The figure is the same as in the question, with some two additional lines drawn. So, the graph has a horizontal axis, labelled miles, with a scale marked from 0 to 50 in steps of 5, and a vertical axis, labelled kilometres, with a scale from 0 to 80 in steps of 10. The straight line of the graph starts at the origin and slopes up to the right, and appears to pass through the point corresponding to 25 miles and 40 kilometres, and through the point corresponding to 50 miles and 80 kilometres. The first additional line is vertical line drawn upwards from the horizontal axis from the point corresponding to 40 miles to the point where it meets the sloping line of the graph. From that point a horizontal line is drawn to meet the vertical axis at the point corresponding to 64 kilometres approximately."></img> </p><p>So 40 miles is approximately 64 km. </p><p>See Unit 2, Subsection 2.3. </p>',
+            'generalfeedback' => '<p> Conversion graph for miles and kilometres. </p>
+<p><img src="http://learnacct.open.ac.uk/file.php/5233/quizImages/u2/figs/42.02.07.GraphConvert.E.png"
+alt=" The figure is the same as in the question, with some two additional lines drawn. So, the graph has a horizontal axis,
+labelled miles, with a scale marked from 0 to 50 in steps of 5, and a vertical axis, labelled kilometres, with a scale from 0 to 80
+in steps of 10. The straight line of the graph starts at the origin and slopes up to the right, and appears to pass through the
+point corresponding to 25 miles and 40 kilometres, and through the point corresponding to 50 miles and 80 kilometres. The first
+additional line is vertical line drawn upwards from the horizontal axis from the point corresponding to 40 miles to the point where
+it meets the sloping line of the graph. From that point a horizontal line is drawn to meet the vertical axis at the point corresponding
+to 64 kilometres approximately."></img> </p><p>So 40 miles is approximately 64 km. </p><p>See Unit 2, Subsection 2.3. </p>',
             'generalfeedbackformat' => '1',
             'timecreated' => '1262959197',
             'timemodified' => '0',
@@ -732,7 +759,8 @@ class qtype_randomconstrained_attempt_upgrader_test extends question_attempt_upg
                 ),
                 44316 => (object) array(
                         'questionid' => '83248',
-                        'hint' => '<p> Find the measurement on the horizontal axis, draw a line vertically up to meet the conversion line and read off the corresponding value on the vertical axis. </p><p>See Unit 2, Subsection 2.3. </p>',
+                        'hint' => '<p> Find the measurement on the horizontal axis, draw a line vertically up to meet the
+conversion line and read off the corresponding value on the vertical axis. </p><p>See Unit 2, Subsection 2.3. </p>',
                         'rest' => null,
                         'id' => 44316,
                 ),
@@ -750,7 +778,13 @@ class qtype_randomconstrained_attempt_upgrader_test extends question_attempt_upg
             'maxmark' => 1,
             'minfraction' => 0,
             'flagged' => 0,
-            'questionsummary' => "The figure below shows a graph for converting between miles and kilometres. \n\n[ The graph has a horizontal axis, labelled miles, with a scale marked from 0 to 50 in steps of 5, and a vertical axis, labelled kilometres, with a scale from 0 to 80 in steps of 10. The straight line of the graph starts at the origin and slopes up to the right, and appears to pass through the point corresponding to 25 miles and 40 kilometres, and through the point corresponding to 50 miles and 80 kilometres. ] \n\nBy taking a reading from the graph, estimate how many kilometres are equivalent to 40 miles. \n\nRound your answer to the nearest kilometre and type it in the box below. \n\n(Your answer should be a single number, without units.)",
+            'questionsummary' => "The figure below shows a graph for converting between miles and kilometres. \n\n
+[ The graph has a horizontal axis, labelled miles, with a scale marked from 0 to 50 in steps of 5, and a vertical axis,
+labelled kilometres, with a scale from 0 to 80 in steps of 10. The straight line of the graph starts at the origin and
+slopes up to the right, and appears to pass through the point corresponding to 25 miles and 40 kilometres, and through the
+point corresponding to 50 miles and 80 kilometres. ] \n\nBy taking a reading from the graph, estimate how many kilometres are
+equivalent to 40 miles. \n\nRound your answer to the nearest kilometre and type it in the box below. \n\n(Your answer should be
+a single number, without units.)",
             'rightanswer' => '64 km',
             'responsesummary' => '64',
             'timemodified' => 1268471437,

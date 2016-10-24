@@ -241,7 +241,7 @@ class qtype_randomconstrained extends question_type {
         // CHANGE+.
         $questioncats = explode(',', @$SESSION->qa_constraints);
         $available = array();
-        for ($i = 0 ; $i < count($questioncats) ; $i++) {
+        for ($i = 0; $i < count($questioncats); $i++) {
             $cid = $questioncats[$i];
             $available = $available + $this->get_available_questions_from_category($cid, !empty($questiondata->questiontext));
             $subs = $DB->get_records('question_categories', array('parent' => $cid), 'name', 'id,id');
@@ -252,7 +252,6 @@ class qtype_randomconstrained extends question_type {
             }
         }
         shuffle($available);
-        debug_trace("QChoice : ".print_r(array_values($available), true));
         // CHANGE-.
 
         foreach ($available as $questionid) {
