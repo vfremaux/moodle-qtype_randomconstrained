@@ -39,6 +39,7 @@ require_once($CFG->dirroot . '/question/type/questiontypebase.php');
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class qtype_randomconstrained extends question_type {
+
     /** @var string comma-separated list of qytpe names not to select, can be used in SQL. */
     protected $excludedqtypes = null;
 
@@ -67,12 +68,15 @@ class qtype_randomconstrained extends question_type {
 
     public function is_question_manual_graded($question, $otherquestionsinuse) {
         global $DB;
-        // We take our best shot at working whether a particular question is manually
-        // graded follows: We look to see if any of the questions that this random
-        // question might select if of a manually graded type. If a category contains
-        // a mixture of manual and non-manual questions, and if all the attempts so
-        // far selected non-manual ones, this will give the wrong answer, but we
-        // don't care. Even so, this is an expensive calculation!
+
+        /*
+         * We take our best shot at working whether a particular question is manually
+         * graded follows: We look to see if any of the questions that this random
+         * question might select if of a manually graded type. If a category contains
+         * a mixture of manual and non-manual questions, and if all the attempts so
+         * far selected non-manual ones, this will give the wrong answer, but we
+         * don't care. Even so, this is an expensive calculation!
+         */
         $this->init_qtype_lists();
         if (!$this->manualqtypes) {
             return false;
@@ -225,7 +229,9 @@ class qtype_randomconstrained extends question_type {
         $available = array();
         for ($i = 0 ; $i < count($questioncats) ; $i++) {
             $cid = $questioncats[$i];
-            debug_trace("Dig into $cid");
+            if (function_exists('debug_trace')) {
+                debug_trace("Dig into $cid");
+            }
             $available = $available + $this->get_available_questions_from_category($cid, !empty($questiondata->questiontext));
             $subs = $DB->get_records('question_categories', array('parent' => $cid), 'name', 'id,id');
             if ($subs) {
@@ -235,7 +241,9 @@ class qtype_randomconstrained extends question_type {
             }
         }
         shuffle($available);
-        debug_trace("QChoice : ".print_r(array_values($available), true));
+        if (function_exists('debug_trace')) {
+            debug_trace("QChoice : ".print_r(array_values($available), true));
+        }
         // CHANGE-.
 
         foreach ($available as $questionid) {
@@ -245,7 +253,9 @@ class qtype_randomconstrained extends question_type {
 
             $question = question_bank::load_question($questionid, $allowshuffle);
             $this->set_selected_question_name($question, $questiondata->name);
-            debug_trace("Choosing $question->id");
+            if (function_exists('debug_trace')) {
+                debug_trace("Choosing $question->id");
+            }
             return $question;
         }
         return null;
