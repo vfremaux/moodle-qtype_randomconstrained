@@ -224,10 +224,11 @@ class qtype_randomconstrained extends question_type {
     public function choose_other_question($questiondata, $excludedquestions, $allowshuffle = true) {
         global $SESSION, $DB;
 
+        debug_trace("choose randomconstrained question");
         // CHANGE+.
         $questioncats = explode(',', @$SESSION->qa_constraints);
         $available = array();
-        for ($i = 0 ; $i < count($questioncats) ; $i++) {
+        for ($i = 0; $i < count($questioncats); $i++) {
             $cid = $questioncats[$i];
             if (function_exists('debug_trace')) {
                 debug_trace("Dig into $cid");
