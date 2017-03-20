@@ -40,10 +40,14 @@ require_once($CFG->dirroot . '/question/type/questiontypebase.php');
  */
 class qtype_randomconstrained extends question_type {
 
-    /** @var string comma-separated list of qytpe names not to select, can be used in SQL. */
+    /**
+     * @var string comma-separated list of qytpe names not to select, can be used in SQL.
+     */
     protected $excludedqtypes = null;
 
-    /** @var string comma-separated list of manually graded qytpe names, can be used in SQL. */
+    /**
+     * @var string comma-separated list of manually graded qytpe names, can be used in SQL.
+     */
     protected $manualqtypes = null;
 
     /**
@@ -87,13 +91,15 @@ class qtype_randomconstrained extends question_type {
             $categorylist = array($question->category);
         }
         list($qcsql, $qcparams) = $DB->get_in_or_equal($categorylist);
-        // TODO use in_or_equal for $otherquestionsinuse and $this->manualqtypes
-        return $DB->record_exists_select('question',
-                "category $qcsql
-                     AND parent = 0
-                     AND hidden = 0
-                     AND id NOT IN ($otherquestionsinuse)
-                     AND qtype IN ($this->manualqtypes)", $qcparams);
+        // TODO use in_or_equal for $otherquestionsinuse and $this->manualqtypes.
+        $select = "
+            category $qcsql AND
+            parent = 0 AND
+            hidden = 0 AND
+            id NOT IN ($otherquestionsinuse) AND
+            qtype IN ($this->manualqtypes)
+        ";
+        return $DB->record_exists_select('question', $select , $qcparams);
     }
 
     /**
@@ -101,11 +107,14 @@ class qtype_randomconstrained extends question_type {
      *      ->manualqtypes fields can be used.
      */
     protected function init_qtype_lists() {
+
         if (!is_null($this->excludedqtypes)) {
             return; // Already done.
         }
+
         $excludedqtypes = array();
         $manualqtypes = array();
+
         foreach (question_bank::get_all_qtypes() as $qtype) {
             $quotedname = "'" . $qtype->name() . "'";
             if (!$qtype->is_usable_by_random()) {
@@ -114,6 +123,7 @@ class qtype_randomconstrained extends question_type {
                 $manualqtypes[] = $quotedname;
             }
         }
+
         $this->excludedqtypes = implode(',', $excludedqtypes);
         $this->manualqtypes = implode(',', $manualqtypes);
     }
@@ -158,17 +168,21 @@ class qtype_randomconstrained extends question_type {
         $form->questiontextformat = FORMAT_MOODLE;
         $form->tags = array();
 
-        // Name is not a required field for random questions, but
-        // parent::save_question Assumes that it is.
+        /*
+         * Name is not a required field for random questions, but
+         * parent::save_question Assumes that it is.
+         */
         return parent::save_question($question, $form);
     }
 
     public function save_question_options($question) {
         global $DB;
 
-        // No options, as such, but we set the parent field to the question's
-        // own id. Setting the parent field has the effect of hiding this
-        // question in various places.
+        /*
+         * No options, as such, but we set the parent field to the question's
+         * own id. Setting the parent field has the effect of hiding this
+         * question in various places.
+         */
         $updateobject = new stdClass();
         $updateobject->id = $question->id;
         $updateobject->parent = $question->id;
@@ -190,6 +204,7 @@ class qtype_randomconstrained extends question_type {
      * @return array of question records.
      */
     public function get_available_questions_from_category($categoryid, $subcategories) {
+
         if (isset($this->availablequestionsbycategory[$categoryid][$subcategories])) {
             return $this->availablequestionsbycategory[$categoryid][$subcategories];
         }
@@ -224,7 +239,6 @@ class qtype_randomconstrained extends question_type {
     public function choose_other_question($questiondata, $excludedquestions, $allowshuffle = true) {
         global $SESSION, $DB;
 
-        debug_trace("choose randomconstrained question");
         // CHANGE+.
         $questioncats = explode(',', @$SESSION->qa_constraints);
         $available = array();
@@ -242,9 +256,6 @@ class qtype_randomconstrained extends question_type {
             }
         }
         shuffle($available);
-        if (function_exists('debug_trace')) {
-            debug_trace("QChoice : ".print_r(array_values($available), true));
-        }
         // CHANGE-.
 
         foreach ($available as $questionid) {
