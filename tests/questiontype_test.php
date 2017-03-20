@@ -26,7 +26,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 global $CFG;
-require_once($CFG->dirroot.'/question/type/random/questiontype.php');
+require_once($CFG->dirroot.'/question/type/randomconstrained/questiontype.php');
 
 /**
  * Unit tests for the random question type class.

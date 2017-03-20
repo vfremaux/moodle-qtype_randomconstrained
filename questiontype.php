@@ -72,6 +72,7 @@ class qtype_randomconstrained extends question_type {
 
     public function is_question_manual_graded($question, $otherquestionsinuse) {
         global $DB;
+
         /*
          * We take our best shot at working whether a particular question is manually
          * graded follows: We look to see if any of the questions that this random
@@ -241,8 +242,11 @@ class qtype_randomconstrained extends question_type {
         // CHANGE+.
         $questioncats = explode(',', @$SESSION->qa_constraints);
         $available = array();
-        for ($i = 0 ; $i < count($questioncats) ; $i++) {
+        for ($i = 0; $i < count($questioncats); $i++) {
             $cid = $questioncats[$i];
+            if (function_exists('debug_trace')) {
+                debug_trace("Dig into $cid");
+            }
             $available = $available + $this->get_available_questions_from_category($cid, !empty($questiondata->questiontext));
             $subs = $DB->get_records('question_categories', array('parent' => $cid), 'name', 'id,id');
             if ($subs) {
@@ -252,7 +256,9 @@ class qtype_randomconstrained extends question_type {
             }
         }
         shuffle($available);
-        debug_trace("QChoice : ".print_r(array_values($available), true));
+        if (function_exists('debug_trace')) {
+            debug_trace("QChoice : ".print_r(array_values($available), true));
+        }
         // CHANGE-.
 
         foreach ($available as $questionid) {
@@ -262,7 +268,9 @@ class qtype_randomconstrained extends question_type {
 
             $question = question_bank::load_question($questionid, $allowshuffle);
             $this->set_selected_question_name($question, $questiondata->name);
-            debug_trace("Choosing $question->id");
+            if (function_exists('debug_trace')) {
+                debug_trace("Choosing $question->id");
+            }
             return $question;
         }
         return null;
