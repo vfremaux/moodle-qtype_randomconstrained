@@ -24,6 +24,8 @@
 
 namespace core_question\bank;
 
+defined('MOODLE_INTERNAL') || die();
+
 require_once($CFG->dirroot.'/question/classes/bank/random_question_loader.php');
 /**
  * This class efficiently finds questions at random from the question bank.
@@ -65,7 +67,7 @@ class randomconstrained_question_loader extends random_question_loader {
     }
 
     /**
-     * changes the way categories are examinated, checks constraints and load 
+     * changes the way categories are examinated, checks constraints and load
      * category trees that belong to overal allowed question space for the calling quiz
      * AND constraints declared in the current attempt.
      *

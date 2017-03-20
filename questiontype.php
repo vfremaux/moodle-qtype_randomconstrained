@@ -256,9 +256,6 @@ class qtype_randomconstrained extends question_type {
             }
         }
         shuffle($available);
-        if (function_exists('debug_trace')) {
-            debug_trace("QChoice : ".print_r(array_values($available), true));
-        }
         // CHANGE-.
 
         foreach ($available as $questionid) {
