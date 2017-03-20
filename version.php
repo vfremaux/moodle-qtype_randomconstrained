@@ -20,7 +20,7 @@
  * @package     qtype_randomconstrained
  * @category    qtype
  * @author      Valery Fremaux <valery.fremaux@gmail.com>
- * @copyright   2014 Valery Fremaux
+ * @copyright   2014 onwards Valery Fremaux (http://www.mylearningfactory.com)
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
