@@ -76,9 +76,8 @@ class randomconstrained_question_loader extends random_question_loader {
      * @param bool $includesubcategories wether to pick a question from exactly
      *      that category, or that category and subcategories.
      */
-    protected function ensure_questions_for_category_loaded($categoryid, $includesubcategories) {
+    protected function ensure_questions_for_category_loaded($categoryid, $includesubcategories, $tags = []) {
         global $DB;
-
         $categorykey = $this->get_category_key($categoryid, $includesubcategories);
 
         if (isset($this->availablequestionscache[$categorykey])) {

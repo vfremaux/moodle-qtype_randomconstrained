@@ -27,10 +27,10 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->version   = 2014091800;
-$plugin->requires  = 2016051900;
+$plugin->requires  = 2018042700;
 $plugin->component = 'qtype_randomconstrained';
-$plugin->release = '3.1.0 (Build 2014091800)';
-$plugin->maturity  = MATURITY_BETA;
+$plugin->release = '3.5.0 (Build 2014091800)';
+$plugin->maturity  = MATURITY_STABLE;
 
 // Non moodle attributes.
-$plugin->codeincrement = '3.1.0000';
+$plugin->codeincrement = '3.5.0000';
