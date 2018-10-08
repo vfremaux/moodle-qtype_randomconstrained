@@ -27,15 +27,6 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->version   = 2014091800;
-<<<<<<< HEAD
-$plugin->requires  = 2016112900;
-$plugin->component = 'qtype_randomconstrained';
-$plugin->release = '3.2.0 (Build 2014091800)';
-$plugin->maturity  = MATURITY_BETA;
-
-// Non moodle attributes.
-$plugin->codeincrement = '3.2.0000';
-=======
 $plugin->requires  = 2018042700;
 $plugin->component = 'qtype_randomconstrained';
 $plugin->release = '3.5.0 (Build 2014091800)';
@@ -43,4 +34,3 @@ $plugin->maturity  = MATURITY_STABLE;
 
 // Non moodle attributes.
 $plugin->codeincrement = '3.5.0000';
->>>>>>> MOODLE_35_STABLE
