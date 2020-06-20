@@ -23,6 +23,8 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+$string['privacy:metadata'] = 'Ce plugin ne détient pas directement de données utilisateur';
+
 $string['configselectmanualquestions'] = 'Can the random constrained question type select a manually graded question when it is making its random choice of a question from a category?';
 $string['category'] = 'Categorie';
 $string['includingsubcategories'] = 'Inclure les sous-catégories (non utilisé)';

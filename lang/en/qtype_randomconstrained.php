@@ -23,6 +23,8 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+$string['privacy:metadata'] = 'This plugin has no direct user data hold by itself.';
+
 $string['configselectmanualquestions'] = 'Can the random constrained question type select a manually graded question when it is making its random choice of a question from a category?';
 $string['category'] = 'Starting category';
 $string['includingsubcategories'] = 'Including subcategories';
@@ -32,4 +34,5 @@ $string['pluginnameediting'] = 'Editing a random constrained question';
 $string['randomconstrainedqname'] = 'Random constrained ({$a})';
 $string['randomconstrainedqplusname'] = 'Random constrained ({$a} and sub-categories)';
 $string['selectedby'] = '{$a->questionname} selected by {$a->randomname}';
+
 $string['selectmanualquestions'] = 'Random constrained questions can use manually graded questions';
