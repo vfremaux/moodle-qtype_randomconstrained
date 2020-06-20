@@ -15,12 +15,12 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version details.
+ * Question type class for the random constained question type.
  *
- * @package     qtype_randomconstrainted
- * @category    qtype
- * @author      Valery Fremaux <valery.fremaux@gmail.com>
- * @copyright   (C) 2010 onwards Valery Fremaux (http://www.mylearningfactory.com)
+ * @package    qtype
+ * @category   randomconstrainted
+ * @author     Valery Fremaux <valery.fremaux@gmail.com>
+ * @copyright  (C) 2010 onwards Valery Fremaux (http://www.mylearningfactory.com)
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -143,8 +143,9 @@ class qtype_randomconstrained extends question_type {
     /**
      * Random questions always get a question name that is Random (cateogryname).
      * This function is a centralised place to calculate that, given the category.
-     * @param object $category the category this question picks from. (Only ->name is used.)
+     * @param stdClass $category the category this question picks from. (Only ->name is used.)
      * @param bool $includesubcategories whether this question also picks from subcategories.
+     * @param string[] $tagnames Name of tags this question picks from.
      * @return string the name this question should have.
      */
     public function question_name($category, $includesubcategories) {
